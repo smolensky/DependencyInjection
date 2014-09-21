@@ -2,7 +2,7 @@ using System;
 
 namespace FirstTry.strategyPattern
 {
-    public class FlyWithOutWings : IFlyBehavior
+    public class FlyWithoutWings : IFlyBehavior
     {
         public void Fly()
         {

@@ -10,7 +10,7 @@ namespace FirstTry.strategyPattern.Ducks
 
         public override void Swim()
         {
-            Console.WriteLine("I'm swimming");
+            Console.WriteLine("I'm swimming!");
         }
 
     }

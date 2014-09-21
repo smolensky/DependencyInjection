@@ -47,7 +47,7 @@
     <Compile Include="strategyPattern\Ducks\Duck.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="strategyPattern\Ducks\FakeDuck.cs" />
-    <Compile Include="strategyPattern\Behavior\FlyWithOutWings.cs" />
+    <Compile Include="strategyPattern\Behavior\FlyWithoutWings.cs" />
     <Compile Include="strategyPattern\Behavior\FlyWithWings.cs" />
     <Compile Include="strategyPattern\Behavior\IFlyBehavior.cs" />
     <Compile Include="strategyPattern\Behavior\IQuackBehavior.cs" />

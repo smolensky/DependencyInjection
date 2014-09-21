@@ -7,6 +7,12 @@
         public IFlyBehavior FlyBehavior;
         public IQuackBehavior QuackBehavior;
 
+        protected Duck(IFlyBehavior flyBehavior, IQuackBehavior quackBehavior)
+        {
+            FlyBehavior = flyBehavior;
+            QuackBehavior = quackBehavior;
+        }
+
         public void PerformFly()
         {
             FlyBehavior.Fly();

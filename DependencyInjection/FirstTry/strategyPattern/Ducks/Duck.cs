@@ -1,26 +1,35 @@
-﻿namespace FirstTry.strategyPattern
+﻿using System;
+
+namespace FirstTry.strategyPattern
 {
-    public abstract class Duck
+    public class Duck
     {
-        public abstract void Swim();
+        private readonly IFlyBehavior _flyBehavior;
+        private readonly IQuackBehavior _quackBehavior;
+        private readonly ISwimBehavior _swimBehavior;
 
-        public IFlyBehavior FlyBehavior;
-        public IQuackBehavior QuackBehavior;
-
-        protected Duck(IFlyBehavior flyBehavior, IQuackBehavior quackBehavior)
+        public Duck(IFlyBehavior flyBehavior, IQuackBehavior quackBehavior, ISwimBehavior swimBehavior)
         {
-            FlyBehavior = flyBehavior;
-            QuackBehavior = quackBehavior;
+            _flyBehavior = flyBehavior;
+            _quackBehavior = quackBehavior;
+            _swimBehavior = swimBehavior;
+
+            Console.WriteLine("I'm created!");
         }
 
         public void PerformFly()
         {
-            FlyBehavior.Fly();
+            _flyBehavior.Fly();
         }
 
         public void PerformQuack()
         {
-            QuackBehavior.Quack();
+            _quackBehavior.Quack();
+        }
+
+        public void PerformSwim()
+        {
+            _swimBehavior.Swim();
         }
     }
 }
